@@ -31,26 +31,26 @@ import java.util.Locale;
 
 public class RNPaletteModule extends ReactContextBaseJavaModule {
 
-  private final ReactApplicationContext reactContext;
-  private Handler mainHandler;
+    private final ReactApplicationContext reactContext;
+    private Handler mainHandler;
 
-  public RNPaletteModule(ReactApplicationContext reactContext) {
-    super(reactContext);
-    this.reactContext = reactContext;
-    this.mainHandler = new Handler(this.reactContext.getMainLooper());
+    public RNPaletteModule(ReactApplicationContext reactContext) {
+        super(reactContext);
+        this.reactContext = reactContext;
+        this.mainHandler = new Handler(this.reactContext.getMainLooper());
 
-  }
+    }
 
-  @Override
-  public String getName() {
-    return "RNPalette";
-  }
+    @Override
+    public String getName() {
+        return "RNPalette";
+    }
 
     private String intToRGBA(int color) {
         return String.format("#%06X", (0xFFFFFF & color));
-       // return String.format(Locale.ENGLISH,"rgba(%d,%d,%d,%.2f)", Color.red(color), Color.green(color), Color.blue(color), (float) (Color.alpha(color)) / 255.0);
+        // return String.format(Locale.ENGLISH,"rgba(%d,%d,%d,%.2f)", Color.red(color),
+        // Color.green(color), Color.blue(color), (float) (Color.alpha(color)) / 255.0);
     }
-
 
     @Nullable
     private Palette getPalletFromBitmap(Bitmap bitmap, Promise promise) {
@@ -85,25 +85,25 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
             Uri uri = Uri.parse(url);
             ImageRequest request = ImageRequestBuilder.newBuilderWithSource(uri)
                     .setLowestPermittedRequestLevel(ImageRequest.RequestLevel.FULL_FETCH)
-                    .setProgressiveRenderingEnabled(false)
-                    .build();
-            final DataSource<CloseableReference<CloseableImage>> dataSource = Fresco.getImagePipeline().fetchDecodedImage(request, this.reactContext);
+                    .setProgressiveRenderingEnabled(false).build();
+            final DataSource<CloseableReference<CloseableImage>> dataSource = Fresco.getImagePipeline()
+                    .fetchDecodedImage(request, this.reactContext);
             dataSource.subscribe(new BaseBitmapDataSubscriber() {
                 @Override
                 public void onNewResultImpl(@Nullable final Bitmap bitmap) {
 
                     getNamedSwatchesFromBitmap(bitmap, promise);
-//                    if (mainHandler == null) {
-//                        return;
-//                    }
-//                    Runnable myRunnable = new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            getNamedSwatchesFromBitmap(bitmap, promise);
-//                        }
-//                    };
-//
-//                    mainHandler.post(myRunnable);
+                    // if (mainHandler == null) {
+                    // return;
+                    // }
+                    // Runnable myRunnable = new Runnable() {
+                    // @Override
+                    // public void run() {
+                    // getNamedSwatchesFromBitmap(bitmap, promise);
+                    // }
+                    // };
+                    //
+                    // mainHandler.post(myRunnable);
                     if (dataSource != null && !dataSource.isClosed()) {
                         dataSource.close();
                     }
@@ -115,16 +115,16 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
                 public void onFailureImpl(DataSource dataSource) {
 
                     promise.reject("500", "Bitmap Error");
-//                    if (mainHandler == null) {
-//                        return;
-//                    }
-//                    Runnable myRunnable = new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            promise.reject("500", "Bitmap Error");
-//                        }
-//                    };
-//                    mainHandler.post(myRunnable);
+                    // if (mainHandler == null) {
+                    // return;
+                    // }
+                    // Runnable myRunnable = new Runnable() {
+                    // @Override
+                    // public void run() {
+                    // promise.reject("500", "Bitmap Error");
+                    // }
+                    // };
+                    // mainHandler.post(myRunnable);
 
                     if (dataSource != null && !dataSource.isClosed()) {
                         dataSource.close();
@@ -139,31 +139,30 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
 
     }
 
-
     @ReactMethod
     public void getAllSwatchesFromUrl(String url, final Promise promise) {
         try {
             Uri uri = Uri.parse(url);
             ImageRequest request = ImageRequestBuilder.newBuilderWithSource(uri)
                     .setLowestPermittedRequestLevel(ImageRequest.RequestLevel.FULL_FETCH)
-                    .setProgressiveRenderingEnabled(false)
-                    .build();
-            final DataSource<CloseableReference<CloseableImage>> dataSource = Fresco.getImagePipeline().fetchDecodedImage(request, this.reactContext);
+                    .setProgressiveRenderingEnabled(false).build();
+            final DataSource<CloseableReference<CloseableImage>> dataSource = Fresco.getImagePipeline()
+                    .fetchDecodedImage(request, this.reactContext);
             dataSource.subscribe(new BaseBitmapDataSubscriber() {
                 @Override
                 public void onNewResultImpl(@Nullable final Bitmap bitmap) {
 
                     getAllSwatchesFromBitmap(bitmap, promise);
-//                    if (mainHandler == null) {
-//                        return;
-//                    }
-//                    Runnable myRunnable = new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            getAllSwatchesFromBitmap(bitmap, promise);
-//                        }
-//                    };
-//                    mainHandler.post(myRunnable);
+                    // if (mainHandler == null) {
+                    // return;
+                    // }
+                    // Runnable myRunnable = new Runnable() {
+                    // @Override
+                    // public void run() {
+                    // getAllSwatchesFromBitmap(bitmap, promise);
+                    // }
+                    // };
+                    // mainHandler.post(myRunnable);
 
                     if (dataSource != null && !dataSource.isClosed()) {
                         dataSource.close();
@@ -175,16 +174,16 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
                 public void onFailureImpl(DataSource dataSource) {
 
                     promise.reject("500", "Bitmap Error");
-//                    if (mainHandler == null) {
-//                        return;
-//                    }
-//                    Runnable myRunnable = new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            promise.reject("500", "Bitmap Error");
-//                        }
-//                    };
-//                    mainHandler.post(myRunnable);
+                    // if (mainHandler == null) {
+                    // return;
+                    // }
+                    // Runnable myRunnable = new Runnable() {
+                    // @Override
+                    // public void run() {
+                    // promise.reject("500", "Bitmap Error");
+                    // }
+                    // };
+                    // mainHandler.post(myRunnable);
 
                     if (dataSource != null && !dataSource.isClosed()) {
                         dataSource.close();

@@ -1,13 +1,15 @@
 
-# react-native-palette
+# react-native-palette-full
+
+info about colors from images or url, compatible with **Android** and **iOS**
 
 ## Getting started
 
-`$ npm install react-native-palette --save`
+`$ npm install react-native-palette-full --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-palette`
+`$ react-native link react-native-palette-full`
 
 ### Manual installation
 
@@ -15,7 +17,7 @@
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-palette` and add `RNPalette.xcodeproj`
+2. Go to `node_modules` ➜ `react-native-palette-full` and add `RNPalette.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNPalette.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -26,20 +28,22 @@
   - Add `new RNPalettePackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-palette'
-  	project(':react-native-palette').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-palette/android')
+  	include ':react-native-palette-full'
+  	project(':react-native-palette-full').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-palette-full/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-palette')
+      compile project(':react-native-palette-full')
   	```
 
 
 ## Usage
 ```javascript
-import RNPalette from 'react-native-palette';
+import Palette from 'react-native-palette-full';
 
-// TODO: What to do with the module?
-RNPalette;
+  Palette.getNamedSwatchesFromUrl(url);
+  Palette.getAllSwatchesFromUrl(url);
+  Palette.getNamedSwatches(path);
+  Palette.getAllSwatches(path);
 ```
   
