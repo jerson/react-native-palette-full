@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "RNPalette"
   s.description  = <<-DESC
-                  RNPalette info about colors from images or url, compatible with **Android** and **iOS**
+                 Info about colors from images or url, compatible with **Android** and **iOS**
                    DESC
   s.homepage     = "https://github.com/jerson/react-native-palette-full"
   s.license      = "MIT"
