@@ -31,6 +31,7 @@ import java.util.Locale;
 
 public class RNPaletteModule extends ReactContextBaseJavaModule {
 
+    private static final String TAG = "RNPalette";
     private final ReactApplicationContext reactContext;
     private Handler mainHandler;
 
