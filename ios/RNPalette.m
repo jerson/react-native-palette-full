@@ -1,37 +1,7 @@
 
+#import "RNPalette.h"
 #import "UIPalette.h"
-#import "iOSPalette.h"
 #import <AssetsLibrary/AssetsLibrary.h>
-
-#if __has_include("RCTLog.h")
-#import "RCTLog.h"
-#else
-#import <React/RCTLog.h>
-#endif
-
-#if __has_include("RCTBridge.h")
-#import "RCTBridge.h"
-#else
-#import <React/RCTBridge.h>
-#endif
-
-#if __has_include("RCTConvert.h")
-#import "RCTConvert.h"
-#else
-#import <React/RCTConvert.h>
-#endif
-
-#if __has_include("RCTEventDispatcher.h")
-#import "RCTEventDispatcher.h"
-#else
-#import <React/RCTEventDispatcher.h>
-#endif
-
-#if __has_include("RCTImageLoader.h")
-#import "RCTImageLoader.h"
-#else
-#import <React/RCTImageLoader.h>
-#endif
 
 #if __has_include("UIImageView+WebCache.h")
 #import "UIImageView+WebCache.h"
@@ -42,6 +12,7 @@
 @interface RNPalette ()
 
 @end
+
 
 @implementation RNPalette
 

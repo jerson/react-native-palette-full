@@ -24,3 +24,4 @@ export default class Palette {
     return RNPalette.getAllSwatches(path);
   }
 }
+

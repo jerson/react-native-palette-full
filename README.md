@@ -19,7 +19,8 @@ info about colors from images or url, compatible with **Android** and **iOS**
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
 2. Go to `node_modules` ➜ `react-native-palette-full` and add `RNPalette.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNPalette.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+4. Go to `Podfile` and add `"SDWebImage", "~>4.3.3"` 
+5. Run your project (`Cmd+R`)<
 
 #### Android
 
