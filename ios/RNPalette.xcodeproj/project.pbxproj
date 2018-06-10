@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31F88A9220CCE5040094462D /* PaletteColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F88A8220CCE5040094462D /* PaletteColorUtils.m */; };
+		31F88A9320CCE5040094462D /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F88A8320CCE5040094462D /* Palette.m */; };
+		31F88A9420CCE5040094462D /* PaletteSwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F88A8520CCE5040094462D /* PaletteSwatch.m */; };
+		31F88A9520CCE5040094462D /* UIImage+Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F88A8720CCE5040094462D /* UIImage+Palette.m */; };
+		31F88A9620CCE5040094462D /* PaletteColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F88A8E20CCE5040094462D /* PaletteColorModel.m */; };
+		31F88A9720CCE5040094462D /* PriorityBoxArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F88A8F20CCE5040094462D /* PriorityBoxArray.m */; };
+		31F88A9820CCE5040094462D /* PaletteTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F88A9020CCE5040094462D /* PaletteTarget.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNPalette.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +31,21 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNPalette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPalette.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F88A8220CCE5040094462D /* PaletteColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteColorUtils.m; sourceTree = "<group>"; };
+		31F88A8320CCE5040094462D /* Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Palette.m; sourceTree = "<group>"; };
+		31F88A8420CCE5040094462D /* UIPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPalette.h; sourceTree = "<group>"; };
+		31F88A8520CCE5040094462D /* PaletteSwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteSwatch.m; sourceTree = "<group>"; };
+		31F88A8620CCE5040094462D /* PriorityBoxArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityBoxArray.h; sourceTree = "<group>"; };
+		31F88A8720CCE5040094462D /* UIImage+Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Palette.m"; sourceTree = "<group>"; };
+		31F88A8820CCE5040094462D /* PaletteTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteTarget.h; sourceTree = "<group>"; };
+		31F88A8920CCE5040094462D /* PaletteSwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteSwatch.h; sourceTree = "<group>"; };
+		31F88A8A20CCE5040094462D /* Palette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Palette.h; sourceTree = "<group>"; };
+		31F88A8B20CCE5040094462D /* PaletteColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteColorUtils.h; sourceTree = "<group>"; };
+		31F88A8D20CCE5040094462D /* PaletteColorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteColorModel.h; sourceTree = "<group>"; };
+		31F88A8E20CCE5040094462D /* PaletteColorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteColorModel.m; sourceTree = "<group>"; };
+		31F88A8F20CCE5040094462D /* PriorityBoxArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityBoxArray.m; sourceTree = "<group>"; };
+		31F88A9020CCE5040094462D /* PaletteTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteTarget.m; sourceTree = "<group>"; };
+		31F88A9120CCE5040094462D /* UIImage+Palette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Palette.h"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPalette.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPalette.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,9 +69,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		31F88A8120CCE5040094462D /* palette */ = {
+			isa = PBXGroup;
+			children = (
+				31F88A8220CCE5040094462D /* PaletteColorUtils.m */,
+				31F88A8320CCE5040094462D /* Palette.m */,
+				31F88A8420CCE5040094462D /* UIPalette.h */,
+				31F88A8520CCE5040094462D /* PaletteSwatch.m */,
+				31F88A8620CCE5040094462D /* PriorityBoxArray.h */,
+				31F88A8720CCE5040094462D /* UIImage+Palette.m */,
+				31F88A8820CCE5040094462D /* PaletteTarget.h */,
+				31F88A8920CCE5040094462D /* PaletteSwatch.h */,
+				31F88A8A20CCE5040094462D /* Palette.h */,
+				31F88A8B20CCE5040094462D /* PaletteColorUtils.h */,
+				31F88A8C20CCE5040094462D /* Model */,
+				31F88A8F20CCE5040094462D /* PriorityBoxArray.m */,
+				31F88A9020CCE5040094462D /* PaletteTarget.m */,
+				31F88A9120CCE5040094462D /* UIImage+Palette.h */,
+			);
+			path = palette;
+			sourceTree = "<group>";
+		};
+		31F88A8C20CCE5040094462D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31F88A8D20CCE5040094462D /* PaletteColorModel.h */,
+				31F88A8E20CCE5040094462D /* PaletteColorModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				31F88A8120CCE5040094462D /* palette */,
 				B3E7B5881CC2AC0600A0062D /* RNPalette.h */,
 				B3E7B5891CC2AC0600A0062D /* RNPalette.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -112,7 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F88A9820CCE5040094462D /* PaletteTarget.m in Sources */,
+				31F88A9320CCE5040094462D /* Palette.m in Sources */,
+				31F88A9620CCE5040094462D /* PaletteColorModel.m in Sources */,
+				31F88A9720CCE5040094462D /* PriorityBoxArray.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNPalette.m in Sources */,
+				31F88A9520CCE5040094462D /* UIImage+Palette.m in Sources */,
+				31F88A9220CCE5040094462D /* PaletteColorUtils.m in Sources */,
+				31F88A9420CCE5040094462D /* PaletteSwatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
