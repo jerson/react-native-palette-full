@@ -1,9 +1,13 @@
 
 {
   "name": "react-native-palette-full",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerson/react-native-palette-full"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
