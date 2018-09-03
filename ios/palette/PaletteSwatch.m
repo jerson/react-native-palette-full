@@ -7,6 +7,7 @@
 //
 
 #import "PaletteSwatch.h"
+#import <math.h>
 
 @interface PaletteSwatch ()
 
