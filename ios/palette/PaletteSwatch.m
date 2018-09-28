@@ -7,6 +7,7 @@
 //
 
 #import "PaletteSwatch.h"
+#import <Math.h>
 
 @interface PaletteSwatch ()
 
@@ -50,10 +51,13 @@
 
     float rf,gf,bf;
     
-    rf = (float)_red /255.0f, gf =  (float)_green / 255, bf = (float)_blue / 255;
+    rf = (float)_red /255.0f;
+    gf =  (float)_green / 255;
+    bf = (float)_blue / 255;
+    
     float max,min;
-    max = MAX(rf, gf) > bf?MAX(rf, gf):bf;
-    min = MIN(rf, gf) < bf?MIN(rf, gf):bf;
+    max = MAX(rf, gf) > bf ? MAX(rf, gf) : bf;
+    min = MIN(rf, gf) < bf ? MIN(rf, gf) : bf;
     float deltaMaxMin = max - min;
     
     float l = (max+min)/2.0;
@@ -63,7 +67,7 @@
         h = s = 0.0F;
     }else{
         if (max == rf){
-//            h = (gf - bf)/deltaMaxMin % 6.0F;
+            h = fmodf((gf - bf)/deltaMaxMin, 6.0F);
         }else{
             if (max == gf){
                 h = (bf - rf)/deltaMaxMin + 2.0F;
@@ -74,8 +78,8 @@
     }
     s = deltaMaxMin / (1.0f - fabsf(2.0f * l - 1.0f));
     
-//    h = h * 60.0F % 360.0F;
-    if (h<0.0F){
+    h = fmodf(h * 60.0F, 360.0F);
+    if (h < 0.0F){
         h += 360.0F;
     }
     NSArray *hsl = @[[NSNumber numberWithFloat:constrain(h, 0.0F, 360.0F)],[NSNumber numberWithFloat:constrain(s, 0.0F, 1.0F)],[NSNumber numberWithFloat:constrain(l, 0.0F, 1.0F)]];
