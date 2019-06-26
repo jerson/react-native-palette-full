@@ -4,7 +4,7 @@ info about colors from images or url, compatible with **Android** and **iOS**
 
 ## Versions
 
-- 1.0.9 (not started yet) we need support both, help please
+- 1.0.9 typescript and javascript support
 - 1.0.8 typescript support
 - 1.0.7 javascript support
 
