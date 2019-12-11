@@ -650,7 +650,8 @@ int hist[32768];
             colorModel.imageColorString = [swatch getColorString];
             
             colorModel.percentage = (CGFloat)[swatch getPopulation]/(CGFloat)self.pixelCount;
-            
+            colorModel.population = [swatch getPopulation];
+
 //            colorModel.titleTextColorString = [swatch getTitleTextColorString];
 //            colorModel.bodyTextColorString = [swatch getBodyTextColorString];
             

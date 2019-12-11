@@ -17,6 +17,8 @@
 /** the percentage of the color,default value is 0 */
 @property (nonatomic,assign) CGFloat percentage;
 
+@property (nonatomic,assign) NSInteger population;
+
 /** TitleTextColorStirng */
 //@property (nonatomic,copy) NSString *titleTextColorString;
 

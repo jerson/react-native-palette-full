@@ -48,8 +48,13 @@ info about colors from images or url, compatible with **Android** and **iOS**
 ```javascript
 import Palette from "react-native-palette-full";
 
-Palette.getNamedSwatchesFromUrl(url);
-Palette.getAllSwatchesFromUrl(url);
-Palette.getNamedSwatches(path);
-Palette.getAllSwatches(path);
+const ouputColors = (colors)=>{
+  console.log(colors);
+};
+
+Palette.getNamedSwatchesFromUrl(url).then(outputColors);
+Palette.getAllSwatchesFromUrl(url).then(outputColors);
+Palette.getNamedSwatches(path).then(outputColors);
+Palette.getAllSwatches(path).then(outputColors);
+
 ```
