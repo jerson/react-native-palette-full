@@ -13,16 +13,22 @@ declare module 'react-native-palette-full' {
   }
 
   export interface IPalette {
-    [key: string]: ISwatch;
+    "Muted": ISwatch,
+    "Muted Dark": ISwatch,
+    "Muted Light": ISwatch,
+    "Vibrant": ISwatch,
+    "Vibrant Dark": ISwatch,
+    "Vibrant Light": ISwatch,
   }
 
+
   export default class Palette {
-    static getNamedSwatchesFromUrl(url: string): IPalette;
+    static getNamedSwatchesFromUrl(url: string): Promise<IPalette>;
 
-    static getAllSwatchesFromUrl(url: string): ISwatch[];
+    static getAllSwatchesFromUrl(url: string): Promise<ISwatch[]>;
 
-    static getNamedSwatches(path: string): IPalette;
+    static getNamedSwatches(path: string): Promise<IPalette>;
 
-    static getAllSwatches(path: string): ISwatch[];
+    static getAllSwatches(path: string): Promise<ISwatch[]>;
   }
 }
