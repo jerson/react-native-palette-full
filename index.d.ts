@@ -8,8 +8,12 @@ declare module 'react-native-palette-full' {
     mutedLight = 'Muted Light',
   }
 
-  export interface ISwatch {
+  export type ISwatch={
     color: string;
+    population : number;
+  }
+  export type ISwatchWithName= ISwatch & {
+    name:string;
   }
 
   export interface IPalette {
@@ -25,10 +29,10 @@ declare module 'react-native-palette-full' {
   export default class Palette {
     static getNamedSwatchesFromUrl(url: string): Promise<IPalette>;
 
-    static getAllSwatchesFromUrl(url: string): Promise<ISwatch[]>;
+    static getAllSwatchesFromUrl(url: string): Promise<ISwatchWithName[]>;
 
     static getNamedSwatches(path: string): Promise<IPalette>;
 
-    static getAllSwatches(path: string): Promise<ISwatch[]>;
+    static getAllSwatches(path: string): Promise<ISwatchWithName[]>;
   }
 }
