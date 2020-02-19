@@ -2,23 +2,17 @@
 
 info about colors from images or url, compatible with **Android** and **iOS**
 
-## Versions
-
-- 1.0.9 typescript and javascript support
-- 1.0.8 typescript support
-- 1.0.7 javascript support
-
 ## Getting started
 
 `$ npm install react-native-palette-full --save`
 
-### Mostly automatic installation
+## Mostly automatic installation
 
 `$ react-native link react-native-palette-full`
 
-### Manual installation
+## Manual installation
 
-#### iOS
+### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
 2. Go to `node_modules` ➜ `react-native-palette-full` and add `RNPalette.xcodeproj`
@@ -26,7 +20,7 @@ info about colors from images or url, compatible with **Android** and **iOS**
 4. Go to `Podfile` and add `"SDWebImage", "~>4.3.3"`
 5. Run your project (`Cmd+R`)<
 
-#### Android
+### Android
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
 
@@ -34,13 +28,16 @@ info about colors from images or url, compatible with **Android** and **iOS**
 - Add `new RNPalettePackage()` to the list returned by the `getPackages()` method
 
 2. Append the following lines to `android/settings.gradle`:
-   ```
+
+   ```groovy
    include ':react-native-palette-full'
    project(':react-native-palette-full').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-palette-full/android')
    ```
+
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-   ```
-     compile project(':react-native-palette-full')
+
+   ```groovy
+     implementation project(':react-native-palette-full')
    ```
 
 ## Usage
@@ -48,7 +45,7 @@ info about colors from images or url, compatible with **Android** and **iOS**
 ```javascript
 import Palette from "react-native-palette-full";
 
-const ouputColors = (colors)=>{
+const outputColors = (colors)=>{
   console.log(colors);
 };
 
