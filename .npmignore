@@ -7,3 +7,4 @@ docs/
 src/
 !android/src
 *.iml
+.github
