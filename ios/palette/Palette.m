@@ -366,7 +366,7 @@ int hist[32768];
 
 - (void)startToAnalyzeImage{
 
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    @synchronized (self) {
         
         [self clearHistArray];
         
@@ -458,7 +458,7 @@ int hist[32768];
         [self findMaxPopulation];
         
         [self getSwatchForTarget];
-    });
+    };
 
 }
 
@@ -650,7 +650,8 @@ int hist[32768];
             colorModel.imageColorString = [swatch getColorString];
             
             colorModel.percentage = (CGFloat)[swatch getPopulation]/(CGFloat)self.pixelCount;
-            
+            colorModel.population = [swatch getPopulation];
+
 //            colorModel.titleTextColorString = [swatch getTitleTextColorString];
 //            colorModel.bodyTextColorString = [swatch getBodyTextColorString];
             
