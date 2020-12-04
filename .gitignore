@@ -2,6 +2,7 @@
 # OSX
 #
 .DS_Store
+__MACOSX
 
 # node.js
 #
@@ -38,9 +39,13 @@ build/
 .gradle
 local.properties
 *.iml
+android/.project
+android/.settings
 
 # BUCK
 buck-out/
 \.buckd/
 *.keystore
-      
+
+# Library
+lib/

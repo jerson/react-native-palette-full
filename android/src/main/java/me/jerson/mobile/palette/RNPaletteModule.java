@@ -1,4 +1,3 @@
-
 package me.jerson.mobile.palette;
 
 import android.graphics.Bitmap;
@@ -39,7 +38,6 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
         super(reactContext);
         this.reactContext = reactContext;
         this.mainHandler = new Handler(this.reactContext.getMainLooper());
-
     }
 
     @Override
@@ -49,8 +47,6 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
 
     private String intToRGBA(int color) {
         return String.format("#%06X", (0xFFFFFF & color));
-        // return String.format(Locale.ENGLISH,"rgba(%d,%d,%d,%.2f)", Color.red(color),
-        // Color.green(color), Color.blue(color), (float) (Color.alpha(color)) / 255.0);
     }
 
     @Nullable
@@ -94,17 +90,6 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
                 public void onNewResultImpl(@Nullable final Bitmap bitmap) {
 
                     getNamedSwatchesFromBitmap(bitmap, promise);
-                    // if (mainHandler == null) {
-                    // return;
-                    // }
-                    // Runnable myRunnable = new Runnable() {
-                    // @Override
-                    // public void run() {
-                    // getNamedSwatchesFromBitmap(bitmap, promise);
-                    // }
-                    // };
-                    //
-                    // mainHandler.post(myRunnable);
                     if (dataSource != null && !dataSource.isClosed()) {
                         dataSource.close();
                     }
@@ -116,17 +101,6 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
                 public void onFailureImpl(DataSource dataSource) {
 
                     promise.reject("500", "Bitmap Error");
-                    // if (mainHandler == null) {
-                    // return;
-                    // }
-                    // Runnable myRunnable = new Runnable() {
-                    // @Override
-                    // public void run() {
-                    // promise.reject("500", "Bitmap Error");
-                    // }
-                    // };
-                    // mainHandler.post(myRunnable);
-
                     if (dataSource != null && !dataSource.isClosed()) {
                         dataSource.close();
                     }
@@ -154,17 +128,6 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
                 public void onNewResultImpl(@Nullable final Bitmap bitmap) {
 
                     getAllSwatchesFromBitmap(bitmap, promise);
-                    // if (mainHandler == null) {
-                    // return;
-                    // }
-                    // Runnable myRunnable = new Runnable() {
-                    // @Override
-                    // public void run() {
-                    // getAllSwatchesFromBitmap(bitmap, promise);
-                    // }
-                    // };
-                    // mainHandler.post(myRunnable);
-
                     if (dataSource != null && !dataSource.isClosed()) {
                         dataSource.close();
                     }
@@ -175,16 +138,6 @@ public class RNPaletteModule extends ReactContextBaseJavaModule {
                 public void onFailureImpl(DataSource dataSource) {
 
                     promise.reject("500", "Bitmap Error");
-                    // if (mainHandler == null) {
-                    // return;
-                    // }
-                    // Runnable myRunnable = new Runnable() {
-                    // @Override
-                    // public void run() {
-                    // promise.reject("500", "Bitmap Error");
-                    // }
-                    // };
-                    // mainHandler.post(myRunnable);
 
                     if (dataSource != null && !dataSource.isClosed()) {
                         dataSource.close();

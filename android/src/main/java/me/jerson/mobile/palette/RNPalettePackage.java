@@ -1,4 +1,3 @@
-
 package me.jerson.mobile.palette;
 
 import java.util.Arrays;
