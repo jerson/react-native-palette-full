@@ -1,6 +1,6 @@
 {
   "name": "react-native-palette-full",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Info about colors from images or url, compatible with **Android** and **iOS**",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
